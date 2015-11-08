@@ -2,7 +2,8 @@
   "description": "Sets The AppMenu Icon To Regular Mode. Disables Symbolic Icons.", 
   "name": "AppMenu Regular Icons", 
   "shell-version": [
-    "3.16"
+    "3.16",
+    "3.18"
   ],  
   "uuid": "appmenu-regular-icons@example.com", 
   "version": 1
