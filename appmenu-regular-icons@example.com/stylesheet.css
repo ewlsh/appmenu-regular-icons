@@ -1,0 +1,11 @@
+.icon-mode-symbolic {
+    -st-icon-style: symbolic;
+}
+
+.icon-mode-regular {
+    -st-icon-style: regular;
+}
+
+.icon-mode-request {
+    -st-icon-style: request;
+}

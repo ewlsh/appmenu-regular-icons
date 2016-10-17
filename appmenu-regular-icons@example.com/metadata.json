@@ -1,11 +1,13 @@
-{ 
-  "description": "Sets The AppMenu Icon To Regular Mode. Disables Symbolic Icons.", 
-  "name": "AppMenu Regular Icons", 
+{
+  "description": "Sets The AppMenu Icon To Regular Mode. Disables Symbolic Icons.",
+  "name": "AppMenu Regular Icons",
   "shell-version": [
     "3.16",
     "3.18",
-    "3.20"
-  ],  
-  "uuid": "appmenu-regular-icons@example.com", 
-  "version": 1.1
+    "3.20",
+    "3.22"
+  ],
+  "settings-schema": "org.gnome.shell.extensions.appmenu-regular-icons",
+  "uuid": "appmenu-regular-icons@example.com",
+  "version": 3
 }
