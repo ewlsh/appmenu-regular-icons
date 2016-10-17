@@ -21,7 +21,7 @@ function init() { /* We don't need to init anything */ }
 function enable() {
     this.settings = Convenience.getSettings();
 
-    this.settings.connect('changed::icon-mode', Lang.bind(this, function () {
+    this._changedSig = this.settings.connect('changed::icon-mode', Lang.bind(this, function () {
         clear_icon_mode();
         update_icon_mode();
     }));
@@ -30,6 +30,7 @@ function enable() {
 }
 
 function disable() {
+    this.settings.disconnect(this._changedSig);
     this.settings = null;
 
     clear_icon_mode();
