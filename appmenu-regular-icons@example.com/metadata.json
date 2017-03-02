@@ -9,5 +9,6 @@
   ],
   "settings-schema": "org.gnome.shell.extensions.appmenu-regular-icons",
   "uuid": "appmenu-regular-icons@example.com",
-  "version": 3
+  "version": 3,
+  "url": "https://github.com/rockon999/appmenu-regular-icons"
 }

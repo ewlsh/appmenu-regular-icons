@@ -37,33 +37,36 @@ function disable() {
 }
 
 function update_icon_mode() {
-    let iconMode = this.settings.get_string('icon-mode');
+    let icon_mode_name = this.settings.get_string('icon-mode');
+    let icon_mode = null;
 
     for (let mode of Object.keys(IconMode)) {
-        if (IconMode[mode].name === iconMode) {
-            iconMode = IconMode[mode];
+        if (IconMode[mode].name === icon_mode_name) {
+            icon_mode = IconMode[mode];
         }
     }
 
-    let iconBox = Main.panel.statusArea.appMenu._iconBox;
+    let icon_box = Main.panel.statusArea.appMenu._iconBox;
 
     /* Make sure _iconBox exists... */
-    if (typeof iconBox !== 'undefined' && iconBox !== null) {
+    if (typeof icon_box !== 'undefined' && icon_box !== null && icon_mode !== null) {
         /* Style it. */
-        iconBox.add_style_class_name(iconMode.css);
+        icon_box.add_style_class_name(icon_mode.css);
     }
 }
 
 function clear_icon_mode() {
     /* Set it back to the Gnome Shell default. */
-    let iconBox = Main.panel.statusArea.appMenu._iconBox;
+    let icon_box = Main.panel.statusArea.appMenu._iconBox;
 
     /* Make sure _iconBox exists... */
-    if (typeof iconBox !== 'undefined' && iconBox !== null) {
+    if (typeof icon_box !== 'undefined' && icon_box !== null) {
         /* Remove any styles. */
         for (let mode of Object.keys(IconMode)) {
-            if (iconBox.has_style_class_name(IconMode[mode].css)) {
-                iconBox.remove_style_class_name(IconMode[mode].css);
+            let css = IconMode[mode].css;
+
+            if (icon_box.has_style_class_name(css)) {
+                icon_box.remove_style_class_name(css);
             }
         }
     }
